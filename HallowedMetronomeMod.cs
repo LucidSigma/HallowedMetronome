@@ -2,7 +2,9 @@ using Terraria.ModLoader;
 
 namespace HallowedMetronomeMod
 {
-	public class HallowedMetronomeMod : Mod
-	{
-	}
+    public class HallowedMetronomeMod
+        : Mod
+    {
+
+    }
 }
