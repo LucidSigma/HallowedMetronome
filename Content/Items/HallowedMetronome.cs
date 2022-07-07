@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace HallowedMetronomeMod.Items
+namespace HallowedMetronomeMod.Content.Items
 {
     public class HallowedMetronome
         : ModItem
