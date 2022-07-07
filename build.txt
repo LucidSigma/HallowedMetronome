@@ -1,0 +1,3 @@
+displayName = Hallowed Metronome
+author = LucidSigma
+version = 0.1
