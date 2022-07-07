@@ -1,0 +1,27 @@
+﻿Mods.HallowedMetronomeMod: {
+    AllowedItemsConfig: {
+        AllowList: {
+            Label: Allow list
+            Tooltip: Any items to have autoswing enabled that aren't by default
+        }
+
+        DenyList: {
+            Label: Deny list
+            Tooltip: Any items to have autoswing disabled that are by default
+        }
+
+        Header: {
+            GeneralOptions: General options
+        }
+
+        Label: Allowed Items Config
+    }
+
+    ItemName: {
+        HallowedMetronome: Hallowed Metronome
+    }
+
+    ItemTooltip: {
+        HallowedMetronome: Enables autoswing for all items when favourited in inventory
+    }
+}

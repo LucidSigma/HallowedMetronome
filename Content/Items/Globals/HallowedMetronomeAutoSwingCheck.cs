@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ModLoader.Config;
 
 namespace HallowedMetronomeMod.Content.Items.Globals
 {
@@ -27,8 +28,15 @@ namespace HallowedMetronomeMod.Content.Items.Globals
 
         public static bool CanItemAutoSwing(in Item item, in Projectile projectile)
         {
-            // If item is in whitelist - return true.
-            // If item is in blacklist - return null;
+            if (HallowedMetronomeMod.ItemAutoSwingAllowList.Contains(new ItemDefinition(item.type)))
+            {
+                return true;
+            }
+
+            if (HallowedMetronomeMod.ItemAutoSwingDenyList.Contains(new ItemDefinition(item.type)))
+            {
+                return false;
+            }
 
             if (item.damage <= 0)
             {
