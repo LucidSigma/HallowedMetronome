@@ -33,9 +33,10 @@ namespace HallowedMetronomeMod.Content.Items
         {
             Recipe recipe = CreateRecipe();
 
+            recipe.AddIngredient(ItemID.DynastyWood, 10);
             recipe.AddIngredient(ItemID.HallowedBar, 8);
-            recipe.AddIngredient(ItemID.SoulofLight, 10);
-            recipe.AddIngredient(ItemID.SoulofNight, 10);
+            recipe.AddIngredient(ItemID.SoulofLight, 8);
+            recipe.AddIngredient(ItemID.SoulofNight, 8);
             recipe.AddIngredient(ItemID.Timer1Second, 1);
 
             recipe.AddTile(TileID.MythrilAnvil);
