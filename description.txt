@@ -1,1 +1,6 @@
-Hallowed Metronome is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+A mod that adds an item which allows autoswing for all items when favourited in the player's inventory.
+
+The item is called the Hallowed Metronome and is crafted from 10 Dynasty Wood, 8 Souls of Light, 8 Souls of Night, 8 Hallowed Bars, and a 1-Second Timer at a Mythril/Orichalcum Anvil.
+
+This mod is open source and is available here: https://github.com/LucidSigma/HallowedMetronome
+If you have anything you wish to contribute (such as translations) or want to fork this mod, you're more than welcome to.
