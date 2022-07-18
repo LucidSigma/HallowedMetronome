@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace HallowedMetronomeMod.Content.Items
 {
-    public class HallowedMetronome
+    public class HellstoneMetronome
         : ModItem
     {
         public override void SetStaticDefaults()
@@ -23,22 +23,33 @@ namespace HallowedMetronomeMod.Content.Items
             Item.width = 30;
             Item.height = 36;
 
-            Item.rare = ItemRarityID.Pink;
+            Item.rare = ItemRarityID.Orange;
 
             Item.maxStack = 1;
-            Item.value = Item.sellPrice(0, 5, 0, 0);
+            Item.value = Item.sellPrice(0, 0, 50, 0);
+
+            Item.accessory = true;
+        }
+
+        public override void UpdateAccessory(Player player, bool hideVisual)
+        {
+            MetronomePlayer metronomePlayer = player.GetModPlayer<MetronomePlayer>();
+
+            if (metronomePlayer is not null)
+            {
+                metronomePlayer.HasHellstoneMetronomeEquipped = true;
+            }
         }
 
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
 
-            recipe.AddIngredient(ModContent.ItemType<HallowedMetronome>(), 1);
-            recipe.AddIngredient(ItemID.HallowedBar, 8);
-            recipe.AddIngredient(ItemID.SoulofLight, 8);
-            recipe.AddIngredient(ItemID.SoulofNight, 8);
+            recipe.AddIngredient(ItemID.DynastyWood, 10);
+            recipe.AddIngredient(ItemID.HellstoneBar, 8);
+            recipe.AddIngredient(ItemID.Timer1Second, 1);
 
-            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.AddTile(TileID.Anvils);
 
             recipe.Register();
         }

@@ -1,6 +1,7 @@
-A mod that adds an item which allows autoswing for all items when favourited in the player's inventory.
+A mod that adds items which allow autoswing for all items.
 
-The item is called the Hallowed Metronome and is crafted from 10 Dynasty Wood, 8 Souls of Light, 8 Souls of Night, 8 Hallowed Bars, and a 1-Second Timer at a Mythril/Orichalcum Anvil.
+The first item is called the Hellstone Metronome and is crafted from 10 Dynasty Wood, 8 Hellstone Bars, and a 1-Second Timer at an Anvil. This is an accessory that will allow autoswing for all items when equipped.
+The second item is called the Hallowed Metronome and is crafted from a Hellstone Metronome, 8 Souls of Light, 8 Souls of Night, and 8 Hallowed Bars at a Mythril/Orichalcum Anvil. This is an item that allows autoswing for all items when favourited in the player's inventory.
 
 By default, most weapons are allowed. Items can be allowed/disallowed in the mod's configuration settings.
 

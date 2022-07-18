@@ -19,9 +19,11 @@
 
     ItemName: {
         HallowedMetronome: Hallowed Metronome
+        HellstoneMetronome: Hellstone Metronome
     }
 
     ItemTooltip: {
         HallowedMetronome: Enables autoswing for all items when favourited in inventory
+        HellstoneMetronome: Enables autoswing for all items
     }
 }

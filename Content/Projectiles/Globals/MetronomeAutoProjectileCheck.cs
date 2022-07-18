@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace HallowedMetronomeMod.Content.Projectiles.Globals
 {
-    public class HallowedMetronomeAutoProjectileCheck
+    public class MetronomeAutoProjectileCheck
         : GlobalProjectile
     {
         public override void AI(Projectile projectile)
@@ -17,12 +17,12 @@ namespace HallowedMetronomeMod.Content.Projectiles.Globals
                 return;
             }
 
-            if (!HallowedMetronomeAutoSwingCheck.HasHallowedMetronomeFavourited(player))
+            if (!MetronomeAutoSwingCheck.HasHallowedMetronomeFavourited(player) && !MetronomeAutoSwingCheck.HasHellstoneMetronomeEquipped(player))
             {
                 return;
             }
 
-            if (!HallowedMetronomeAutoSwingCheck.CanItemAutoSwing(player.HeldItem, projectile))
+            if (!MetronomeAutoSwingCheck.CanItemAutoSwing(player.HeldItem, projectile))
             {
                 return;
             }

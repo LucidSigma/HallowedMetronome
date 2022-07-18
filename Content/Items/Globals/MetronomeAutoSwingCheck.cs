@@ -1,3 +1,4 @@
+using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -5,12 +6,12 @@ using Terraria.ModLoader.Config;
 
 namespace HallowedMetronomeMod.Content.Items.Globals
 {
-    public class HallowedMetronomeAutoSwingCheck
+    public class MetronomeAutoSwingCheck
         : GlobalItem
     {
         public override bool? CanAutoReuseItem(Item item, Player player)
         {
-            if (!HasHallowedMetronomeFavourited(player))
+            if (!HasHallowedMetronomeFavourited(player) && !HasHellstoneMetronomeEquipped(player))
             {
                 return null;
             }
@@ -71,6 +72,31 @@ namespace HallowedMetronomeMod.Content.Items.Globals
             foreach (Item inventoryItem in player.inventory)
             {
                 if (inventoryItem is not null && inventoryItem.ModItem is HallowedMetronome && inventoryItem.favorited)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool HasHellstoneMetronomeEquipped(in Player player)
+        {
+            if (player is null)
+            {
+                return false;
+            }
+
+            MetronomePlayer metronomePlayer = player.GetModPlayer<MetronomePlayer>();
+
+            if (metronomePlayer is not null && metronomePlayer.HasHellstoneMetronomeEquipped)
+            {
+                return true;
+            }
+
+            foreach (var accessory in player.armor.Skip(3))
+            {
+                if (accessory.type == ModContent.ItemType<HallowedMetronome>())
                 {
                     return true;
                 }
