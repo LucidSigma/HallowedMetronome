@@ -45,7 +45,6 @@ namespace HallowedMetronomeMod.Content.Items
         {
             Recipe recipe = CreateRecipe();
 
-            recipe.AddIngredient(ItemID.DynastyWood, 10);
             recipe.AddIngredient(ItemID.HellstoneBar, 8);
             recipe.AddIngredient(ItemID.Timer1Second, 1);
 
