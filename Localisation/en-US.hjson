@@ -1,29 +1,32 @@
-﻿Mods.HallowedMetronomeMod: {
-    AllowedItemsConfig: {
-        AllowList: {
-            Label: Allow list
-            Tooltip: Any items to have autoswing enabled that aren't by default
-        }
+Mods: {
+	HallowedMetronomeMod: {
+		Items: {
+			HallowedMetronome: {
+				DisplayName: Hallowed Metronome
+				Tooltip: Enables autoswing for all items when favourited in inventory
+			}
 
-        DenyList: {
-            Label: Deny list
-            Tooltip: Any items to have autoswing disabled that are by default
-        }
+			HellstoneMetronome: {
+				DisplayName: Hellstone Metronome
+				Tooltip: Enables autoswing for all items
+			}
+		}
 
-        Header: {
-            GeneralOptions: General options
-        }
+		Configs: {
+			AllowedItemsConfig: {
+				DisplayName: Allowed Items Config
+				Headers.GeneralOptions: General options
 
-        Label: Allowed Items Config
-    }
+				AllowList: {
+					Label: Allow List
+					Tooltip: Any items to have autoswing enabled that aren't by default
+				}
 
-    ItemName: {
-        HallowedMetronome: Hallowed Metronome
-        HellstoneMetronome: Hellstone Metronome
-    }
-
-    ItemTooltip: {
-        HallowedMetronome: Enables autoswing for all items when favourited in inventory
-        HellstoneMetronome: Enables autoswing for all items
-    }
+				DenyList: {
+					Label: Deny List
+					Tooltip: Any items to have autoswing disabled that are by default
+				}
+			}
+		}
+	}
 }
